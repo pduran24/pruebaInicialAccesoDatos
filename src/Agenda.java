@@ -14,18 +14,15 @@ public class Agenda {
                 if (contacto.getTelefono().equalsIgnoreCase(telefono) && contacto.getNombre().equalsIgnoreCase(nombre)) {
                     throw new ContactoYaExistenteException("El contacto ya existe en la agenda");
                 }
-                else {
-                    Contacto c = new Contacto(nombre,telefono);
-                    listaContactos.add(c);
-                    System.out.println("\nContacto añadido correctamente.");
-                }
             }
         }
-        else {
-            Contacto c = new Contacto(nombre,telefono);
-            listaContactos.add(c);
-            System.out.println("\nContacto añadido correctamente.");
-        }
+
+        Contacto c = new Contacto(nombre,telefono);
+        listaContactos.add(c);
+        System.out.println("\nContacto añadido correctamente.");
+
+
+
 
     }
 
