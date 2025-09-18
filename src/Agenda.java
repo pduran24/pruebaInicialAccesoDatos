@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Date;
+
 
 public class Agenda {
 
@@ -11,8 +11,8 @@ public class Agenda {
 
         if (!listaContactos.isEmpty()) {
             for (Contacto contacto : listaContactos) {
-                if (contacto.getTelefono().equalsIgnoreCase(telefono)) {
-                    System.out.println("El contacto ya existe en la agenda.");
+                if (contacto.getTelefono().equalsIgnoreCase(telefono) && contacto.getNombre().equalsIgnoreCase(nombre)) {
+                    throw new ContactoYaExistenteException("El contacto ya existe en la agenda");
                 }
                 else {
                     Contacto c = new Contacto(nombre,telefono);
