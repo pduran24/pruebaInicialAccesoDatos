@@ -4,7 +4,7 @@ import java.util.Date;
 public class Agenda {
 
 
-    private ArrayList<Contacto> listaContactos = new ArrayList<>();
+    private ArrayList<Contacto> listaContactos = new ArrayList<Contacto>();
 
 
     public void aniadirContacto(String nombre, String telefono) {
