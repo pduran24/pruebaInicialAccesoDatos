@@ -43,6 +43,7 @@ public class Main {
                 }
                 case 4 -> {
                     System.out.println("Saliendo...");
+                    sc.close();
                 }
             }
 
