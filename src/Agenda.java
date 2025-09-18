@@ -27,16 +27,20 @@ public class Agenda {
     }
 
     public void buscarContactoPorNombre(String nombre) {
+        Contacto concacto = null;
         if (!listaContactos.isEmpty()) {
             for (Contacto c : listaContactos) {
                 if (c.getNombre().equalsIgnoreCase(nombre)) {
-                    System.out.println(c);
-                    return;
-                }
-                else {
-                    System.out.println("No existe dicho contacto en la agenda.");
+                    concacto = c;
+
                 }
             }
+
+            if (concacto==null)
+                System.out.println("No existe dicho contacto en la agenda.");
+            else
+                System.out.println(concacto);
+
         }
         else {
             System.out.println("No hay contactos en la agenda.");
